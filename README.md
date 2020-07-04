@@ -1,7 +1,6 @@
-# aws-saa-certification
-Amazon Solution Architect Associate Exam Prep
+## Amazon Solution Architect Associate Exam Prep
 
-#Exam guide
+## Exam guide
 https://d1.awsstatic.com/training-and-certification/docs-sa-assoc/AWS_Certified_Solutions_Architect_Associate-Exam_Guide_EN_1.8.pdf
 
 ####
