@@ -1,9 +1,13 @@
 # Amazon Solution Architect Associate Exam Prep
-- [Exam guide](#exam_guide)
+- [Exam Guide](#exam_guide)
 - [Resilience](#resilience)
+- [Performance](#performance)
+- [Security](#security)
+- [Cost Optimization](#cost_optimization)
 
 
-## Exam guide
+
+## Exam Guide
 https://d1.awsstatic.com/training-and-certification/docs-sa-assoc/AWS_Certified_Solutions_Architect_Associate-Exam_Guide_EN_1.8.pdf
 
 ## Resilience
@@ -52,13 +56,10 @@ https://aws.amazon.com/caching/#targetText=In%20computing%2C%20a%20cache%20is,th
 #### Example of scaling an infrastructure
 https://aws.amazon.com/blogs/architecture/scale-your-web-application-one-step-at-a-time/
 
-
-
 #### Great catalog of launchable solutions in AWS:
 https://aws.amazon.com/solutions/
 
 ## Security
-
 
 #### AWS Security Specialty Cert video!
 http://www.pearsonitcertification.com/store/aws-certified-security-specialty-complete-video-course-9780135772102
