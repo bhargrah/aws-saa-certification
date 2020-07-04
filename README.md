@@ -4,6 +4,8 @@
 - [Performance](#performance)
 - [Security](#security)
 - [Cost Optimization](#cost_optimization)
+- [Operational Excellence](#operational_excellence)
+
 
 
 
@@ -86,7 +88,6 @@ https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Security.html
 https://aws.amazon.com/<servicename>/pricing
 
 ## Operational Excellence
-## Read the whole whitepaper
 https://d1.awsstatic.com/whitepapers/architecture/AWS-Operational-Excellence-Pillar.pdf
 
 
