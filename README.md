@@ -1,8 +1,8 @@
 # Amazon Solution Architect Associate Exam Prep
 - [Exam Guide](#exam_guide)
-- [Resilience](#resilience)
-- [Performance](#performance)
 - [Security](#security)
+- [Resilience](#resilience)
+- [Performance Efficiency](#performance)
 - [Cost Optimization](#cost_optimization)
 - [Operational Excellence](#operational_excellence)
 
