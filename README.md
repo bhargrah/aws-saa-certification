@@ -1,16 +1,15 @@
 # Amazon Solution Architect Associate Exam Prep
 - [Exam Guide](#exam_guide)
+
+## Exam Guide
+https://d1.awsstatic.com/training-and-certification/docs-sa-assoc/AWS_Certified_Solutions_Architect_Associate-Exam_Guide_EN_1.8.pdf
+
+# AWS Desing Pillars 
 - [Security](#security)
 - [Resilience](#resilience)
 - [Performance Efficiency](#performance)
 - [Cost Optimization](#cost_optimization)
 - [Operational Excellence](#operational_excellence)
-
-
-
-
-## Exam Guide
-https://d1.awsstatic.com/training-and-certification/docs-sa-assoc/AWS_Certified_Solutions_Architect_Associate-Exam_Guide_EN_1.8.pdf
 
 ## Resilience
 
