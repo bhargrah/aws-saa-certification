@@ -1,6 +1,6 @@
 # Amazon Solution Architect Associate Exam Prep
 
-## AWS Desing Pillars 
+## AWS Desing Pillars White Papers
 - [Reliability](#reliability)
 - [Performance Efficiency](#performance)
 - [Security](#security)
