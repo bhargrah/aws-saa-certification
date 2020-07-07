@@ -1,33 +1,13 @@
 # Amazon Solution Architect Associate Exam Prep
 
 ## AWS Desing Pillars 
-- [Security](#security)
-- [Resilience](#resilience)
+- [Reliability](#reliability)
 - [Performance Efficiency](#performance)
+- [Security](#security)
 - [Cost Optimization](#cost_optimization)
 - [Operational Excellence](#operational_excellence)
 
-## Security
-
-#### AWS Security Specialty Cert video!
-http://www.pearsonitcertification.com/store/aws-certified-security-specialty-complete-video-course-9780135772102
-
-#### AWS Organizations FAQ
-https://aws.amazon.com/organizations/faqs/
-
- #### Creating WAF Web ACLs
-https://docs.aws.amazon.com/waf/latest/developerguide/web-acl.html
-
- #### Using Secrets Manager for RDS credentials
-https://aws.amazon.com/blogs/security/rotate-amazon-rds-database-credentials-automatically-with-aws-secrets-manager/
-
-#### AWS Transit Gateway for connecting networks
-https://aws.amazon.com/transit-gateway/
-
- #### VPC security
-https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Security.html
-
-## Resilience
+## Reliability
 
 #### SLAs for common services, starting on page 54
 https://d1.awsstatic.com/whitepapers/architecture/AWS-Reliability-Pillar.pdf
@@ -75,6 +55,26 @@ https://aws.amazon.com/blogs/architecture/scale-your-web-application-one-step-at
 
 #### Great catalog of launchable solutions in AWS:
 https://aws.amazon.com/solutions/
+
+## Security
+
+#### AWS Security Specialty Cert video!
+http://www.pearsonitcertification.com/store/aws-certified-security-specialty-complete-video-course-9780135772102
+
+#### AWS Organizations FAQ
+https://aws.amazon.com/organizations/faqs/
+
+ #### Creating WAF Web ACLs
+https://docs.aws.amazon.com/waf/latest/developerguide/web-acl.html
+
+ #### Using Secrets Manager for RDS credentials
+https://aws.amazon.com/blogs/security/rotate-amazon-rds-database-credentials-automatically-with-aws-secrets-manager/
+
+#### AWS Transit Gateway for connecting networks
+https://aws.amazon.com/transit-gateway/
+
+ #### VPC security
+https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Security.html
 
 ## Cost Optimization
 
