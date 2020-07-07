@@ -7,7 +7,7 @@
 - [Cost Optimization](#cost_optimization)
 - [Operational Excellence](#operational_excellence)
 
-### Security
+## Security
 
 #### AWS Security Specialty Cert video!
 http://www.pearsonitcertification.com/store/aws-certified-security-specialty-complete-video-course-9780135772102
@@ -27,7 +27,7 @@ https://aws.amazon.com/transit-gateway/
  #### VPC security
 https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Security.html
 
-### Resilience
+## Resilience
 
 #### SLAs for common services, starting on page 54
 https://d1.awsstatic.com/whitepapers/architecture/AWS-Reliability-Pillar.pdf
