@@ -19,3 +19,18 @@
 - Use serverless architecture 
 - Experiment more often 
 - Mechnical sympathy
+
+## Security
+- Implement a strong foundation 
+- Enable tracebility
+- Apply security to all layers
+- Automate security best practices 
+- Protect data in transit and at rest
+- Keep people away from data
+- Prepare for security events
+
+## Cost Optimization
+- Adpot a consumption model
+- Measure overall efficiency
+- Stop spending money on data center operations
+- 
