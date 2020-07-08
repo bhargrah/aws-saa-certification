@@ -11,7 +11,8 @@
 - https://d1.awsstatic.com/whitepapers/architecture/AWS-Reliability-Pillar.pdf
 
 #### SLAs for each service can be found here:
-- https://aws.amazon.com/<servicename>/sla
+- https://aws.amazon.com/{servicename}/sla
+- https://aws.amazon.com/ec2/sla
 
 #### Single VPC design principles
 - https://aws.amazon.com/answers/networking/aws-single-vpc-design/
