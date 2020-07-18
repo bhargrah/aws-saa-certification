@@ -1,4 +1,4 @@
-- Access control list (ACL): A firewall/security layer on the subnet level
+- *Access control list (ACL)*: A firewall/security layer on the subnet level
 - Auto scaling: Automates the process of adding or removing EC2 instances based on traffic demand for your application
 - Buckets: Root-level “folders”
 - CloudFront: Content delivery network (CDN) that allows you to store your content at “edge locations” located all around the world, allowing customers to access your content more quickly
