@@ -1,4 +1,4 @@
-## Regions
+## Exam Notes
 
 #### IAM & AWS CLI
 - 
