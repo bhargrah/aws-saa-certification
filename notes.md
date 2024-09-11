@@ -21,7 +21,7 @@
 -  CPU , RAM , Network attached (EBS & EFS) , Hardware (EC2 instance stoire)
 -  Security group , bootstrapping scripts (runs once at boot time)
 -  AMI (Amazon Machine Images) package OS , additional installations as reusable template .
--  instance types
+-  Instance types
     * t-type and m-type for general purpose (web servers , code repositories -> balance compute , memeory n networking)
     * c-type for compute optimized (compute-intensive , batch processing , media trnascoding, high perf web server , high perf comuting , ML , gaming server)
     * r-type, x-type, and z-type for memory-optimized (high perf , relatinal/non db's , distributed cache , in-memeory database for PI , real time processing of unstrutured data)
