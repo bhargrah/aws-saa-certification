@@ -20,6 +20,7 @@
 -  OS : Linux , Windows or Mac OS
 -  CPU , RAM , Network attached (EBS & EFS) , Hardware (EC2 instance stoire)
 -  Security group , bootstrapping scripts (runs once at boot time)
+-  AMI (Amazon Machine Images) package OS , additional installations as reusable template .
 -  instance types
     * t-type and m-type for general purpose
     * c-type for compute optimized
