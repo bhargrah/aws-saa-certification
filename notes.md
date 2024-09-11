@@ -27,3 +27,5 @@
     * r-type, x-type, and z-type for memory-optimized (high perf , relatinal/non db's , distributed cache , in-memeory database for PI , real time processing of unstrutured data)
     * d-type, h-type, and i-type for storage optimized (high sequential r/w . OLTP system , relatinal/non db's , redis (in-memery) , DFS)
     * f-type, g-type, and p-type for accelerated computing
+-  Security Groups -> firewalls , allow rules only , can be refrence by IP or security group , inbound and outbound rules
+-  Ports : 22 (SSH) , 21 (FTP) , 22 (SFTP , secure) , 80 (HTTP) , 443 (HTTPS) , 3389 (RDP)
