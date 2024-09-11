@@ -19,7 +19,7 @@
 #### EC2 (Elastic Compute Cloud) (global)
 -  OS : Linux , Windows or Mac OS
 -  CPU , RAM , Network attached (EBS & EFS) , Hardware (EC2 instance stoire)
--  Security group , bootstrapping scripts
+-  Security group , bootstrapping scripts (runs once at boot time)
 -  instance types
     * t-type and m-type for general purpose
     * c-type for compute optimized
