@@ -37,6 +37,14 @@
    * Dedicated Hosts
    * Capcaity Reservations
 - Spot Fleets (Startegies : lowestPrice , diversified , capacityOptimized , priceCapacityOptimized)
+- EC2 Hibernate - faster boot time (RAM retained -> EBS volume) 
+   * Stop : data on disk kept intact in next restart 
+   * Terminate : data or ant EBS volume(root) setup to be destroyed
+   * Use Case - Long running processing , services that takes time to initialize
+   * RAM size < 150 GB
+   * Root volume must be EBS
+   * Avaialble on all instance type
+   * 60 days retention 
 
 #### EC2 Placement Groups (Elastic Compute Cloud) (global)
 - Private Vs Public IP (think)
@@ -45,4 +53,9 @@
    * Cluster - Same AZ , Low latency , 10GBPS network , drawback - AZ fails , all instances fails if AZ goes down
    * Spread  - span across multiple AZ , reduce risk of fails , different physical hardware  | drawback - 7 instance/AZ per placement group [maximize avaialbility , critical workload]
    * Partition - 7 partition per AZ , 100s of EC2 , each parition share diffrent physical server [HDFS , HBase , Cassandra , Kafka]
+
+#### ENI (Elastic Network Interfaces)
+- Logical component in a VPC that represents a virtual network card
+- Attribtes : IPv4 per private IPv4 , one or more SG , a MAC address
+- Bound to specific availibility zone
 
