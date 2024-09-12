@@ -29,3 +29,10 @@
     * f-type, g-type, and p-type for accelerated computing
 -  Security Groups -> firewalls , allow rules only , can be refrence by IP or security group , inbound and outbound rules
 -  Ports : 22 (SSH) , 21 (FTP) , 22 (SFTP , secure) , 80 (HTTP) , 443 (HTTPS) , 3389 (RDP)
+-  Purchasing Options
+   * On Demand 
+   * Reserved
+   * Saving Plans
+   * Spot Instance
+   * Dedicated Hosts
+   * Capcaity Reservations  
