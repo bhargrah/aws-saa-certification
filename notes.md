@@ -33,6 +33,7 @@
    * On Demand 
    * Reserved
    * Saving Plans
-   * Spot Instance
+   * Spot Instance (90% discount)
    * Dedicated Hosts
-   * Capcaity Reservations  
+   * Capcaity Reservations
+- Spot Fleets (Startegies : lowestPrice , diversified , capacityOptimized , priceCapacityOptimized)
