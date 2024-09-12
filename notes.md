@@ -24,7 +24,7 @@
 -  Instance types
     * t-type and m-type for general purpose (web servers , code repositories -> balance compute , memeory n networking)
     * c-type for compute optimized (compute-intensive , batch processing , media trnascoding, high perf web server , high perf comuting , ML , gaming server)
-    * r-type, x-type, and z-type for memory-optimized (high perf , relatinal/non db's , distributed cache , in-memeory database for PI , real time processing of unstrutured data)
+    * r-type, x-type, and z-type for memory-optimized (high perf , relatinal/non db's , distributed cache , in-memeory database for BI , real time processing of unstrutured data)
     * d-type, h-type, and i-type for storage optimized (high sequential r/w . OLTP system , relatinal/non db's , redis (in-memery) , DFS)
     * f-type, g-type, and p-type for accelerated computing
 -  Security Groups -> firewalls , allow rules only , can be refrence by IP or security group , inbound and outbound rules
@@ -37,3 +37,12 @@
    * Dedicated Hosts
    * Capcaity Reservations
 - Spot Fleets (Startegies : lowestPrice , diversified , capacityOptimized , priceCapacityOptimized)
+
+#### EC2 Placement Groups (Elastic Compute Cloud) (global)
+- Private Vs Public IP (think)
+- Elastic IPs : public IPv4 , fixed , only 5 elastic IP , try avoiding elastic IP
+- EC2 placement stategy : Cluster ,  Spread n Partition
+   * Cluster - Same AZ , Low latency , 10GBPS network , drawback - AZ fails , all instances fails if AZ goes down
+   * Spread  - span across multiple AZ , reduce risk of fails , different physical hardware  | drawback - 7 instance/AZ per placement group [maximize avaialbility , critical workload]
+   * Partition - 7 partition per AZ , 100s of EC2 , each parition share diffrent physical server [HDFS , HBase , Cassandra , Kafka]
+
