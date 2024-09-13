@@ -63,4 +63,8 @@
 - EBS (Elastic Block Store) volume is a network drive , gets attached to instance , latency impact
 - Think of hard disk which retains data after instance teminates , attach / detach 
 - Mounte to one instance at a time , bound to specififc AZ , instance (eu-west-1a) --> volume (eu-west-1a) --X--> volume (eu-west-1b) not work
-- Delete on Termination attribute , once set , will delete EBS too. 
+- Delete on Termination attribute , once set , will delete EBS too.
+- Snapshots (backup) , can be taken any point in time , used to migrate data from one AZ to another
+- EBS Snapshot Archive --> Archive tiew , 75% cheaper , takes 24 to 72 hours for restoration
+- Recycle Bin for EBS snapshots - rules to retain deleted snapshot , to recover from accidental deletion , 1 day to 1 year retention period
+- Fast Snapshot Restore (FSR) - force full initialization of snapshot to avoid lartency , expecsive 
