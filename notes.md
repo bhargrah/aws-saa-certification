@@ -59,7 +59,7 @@
 - Attribtes : IPv4 per private IPv4 , one or more SG , a MAC address
 - Bound to specific availibility zone
 
-#### EC2 : Storage (Elastic Network Interfaces)
+#### EC2 : Storage
 - EBS (Elastic Block Store) volume is a network drive , gets attached to instance , latency impact
 - Think of hard disk which retains data after instance teminates , attach / detach 
 - Mounte to one instance at a time , bound to specififc AZ , instance (eu-west-1a) --> volume (eu-west-1a) --X--> volume (eu-west-1b) not work
@@ -68,3 +68,10 @@
 - EBS Snapshot Archive --> Archive tiew , 75% cheaper , takes 24 to 72 hours for restoration
 - Recycle Bin for EBS snapshots - rules to retain deleted snapshot , to recover from accidental deletion , 1 day to 1 year retention period
 - Fast Snapshot Restore (FSR) - force full initialization of snapshot to avoid lartency , expecsive 
+
+#### AMI (Amazon Machine Image)
+- custome EC2 instance
+- add own software , configuration , OS , monitoring
+- faster boot time , as software are pre-pakaged
+- AMI for specific region , can be copoied across regions
+- Start EC2 , stop it , create AMI (EBS also gets created) 
