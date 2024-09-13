@@ -67,7 +67,8 @@
 - Snapshots (backup) , can be taken any point in time , used to migrate data from one AZ to another
 - EBS Snapshot Archive --> Archive tiew , 75% cheaper , takes 24 to 72 hours for restoration
 - Recycle Bin for EBS snapshots - rules to retain deleted snapshot , to recover from accidental deletion , 1 day to 1 year retention period
-- Fast Snapshot Restore (FSR) - force full initialization of snapshot to avoid lartency , expecsive 
+- Fast Snapshot Restore (FSR) - force full initialization of snapshot to avoid lartency , expecsive
+- EC2 instance store : local storage comes with insatnce , vanish when instance restarts (use case cache , buffer data etc)
 
 #### AMI (Amazon Machine Image)
 - custome EC2 instance
