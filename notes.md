@@ -62,5 +62,5 @@
 #### EC2 : Storage (Elastic Network Interfaces)
 - EBS (Elastic Block Store) volume is a network drive , gets attached to instance , latency impact
 - Think of hard disk which retains data after instance teminates , attach / detach 
-- Mounte to one instance at a time , bound to specififc AZ
+- Mounte to one instance at a time , bound to specififc AZ , instance (eu-west-1a) --> volume (eu-west-1a) --X--> volume (eu-west-1b) not work
 - Delete on Termination attribute , once set , will delete EBS too. 
