@@ -78,7 +78,12 @@
    * possible , EBS volume to multiple EC2 in same AZ
    * Full read and write permission , upto 16 instance at a time#
    * file system must be cluster aware  
-
+- EBS Volume Encryption
+   * data a rest , in flight between inctances and volume
+   * snapshot are alos encrypted
+   * also volume create dfrom snapshot is encrypted
+   * minimal impact on latency {KMS (AES-256)}
+   * snapshot(unencrypt) --> snapshot (encrypt , using copy) --> create new EBS volume from snapshot --> attach to original instance
 
 #### AMI (Amazon Machine Image)
 - custome EC2 instance
