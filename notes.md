@@ -90,4 +90,20 @@
 - add own software , configuration , OS , monitoring
 - faster boot time , as software are pre-pakaged
 - AMI for specific region , can be copoied across regions
-- Start EC2 , stop it , create AMI (EBS also gets created) 
+- Start EC2 , stop it , create AMI (EBS also gets created)
+
+#### EFS : Elastic File System
+- Managed NFS(network file system) that can be mounted on many EC2
+- EFS works with EC2 in multi-AZ
+- Higly available , scalable , expecnsive (3x gp3) , pay per use , no capacity planning
+- Use : web serving , data sharing , wordpress
+- Security group for control access , encryption at rest
+- Linux AMI only not with windows
+- Scale : 1000s concurrent NFS clients , 10GB+ /s throughput , can grow to petabyte
+- Mode
+   * Performance Mode : 1) genereal purpose(default) & 2) max I/O (high latency , throughput)
+   * Throughput Mode : 1) Bursting 2) Provisioned 3) Elastic  
+- Storage Tiers
+   * standard : 
+   * infrequent access : cost to retrieve
+   * archive : few time a year , 50% cheaper 
