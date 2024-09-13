@@ -69,6 +69,11 @@
 - Recycle Bin for EBS snapshots - rules to retain deleted snapshot , to recover from accidental deletion , 1 day to 1 year retention period
 - Fast Snapshot Restore (FSR) - force full initialization of snapshot to avoid lartency , expecsive
 - EC2 instance store : local storage comes with insatnce , vanish when instance restarts (use case cache , buffer data etc)
+- EBS Volume Types
+   * gp2/gp3 (SSD) - general purpose SSD , uses as boot volumes
+   * io1 / io2 Block express - highest performance SSD , mission critical , low latency or high throughput worklods , uses as boot volumes
+   * st1 (HHD) , low cost , designed for frequencyt accessed , throughput intensive workload
+   * sc1 (HHD) , lowest cost 
 
 #### AMI (Amazon Machine Image)
 - custome EC2 instance
