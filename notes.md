@@ -59,3 +59,8 @@
 - Attribtes : IPv4 per private IPv4 , one or more SG , a MAC address
 - Bound to specific availibility zone
 
+#### EC2 : Storage (Elastic Network Interfaces)
+- EBS (Elastic Block Store) volume is a network drive , gets attached to instance , latency impact
+- Think of hard disk which retains data after instance teminates , attach / detach 
+- Mounte to one instance at a time , bound to specififc AZ
+- Delete on Termination attribute , once set , will delete EBS too. 
