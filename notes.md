@@ -70,10 +70,15 @@
 - Fast Snapshot Restore (FSR) - force full initialization of snapshot to avoid lartency , expecsive
 - EC2 instance store : local storage comes with insatnce , vanish when instance restarts (use case cache , buffer data etc)
 - EBS Volume Types
-   * gp2/gp3 (SSD) - general purpose SSD , uses as boot volumes
-   * io1 / io2 Block express - highest performance SSD , mission critical , low latency or high throughput worklods , uses as boot volumes
-   * st1 (HHD) , low cost , designed for frequencyt accessed , throughput intensive workload
-   * sc1 (HHD) , lowest cost 
+   * gp2/gp3 (SSD) - general purpose SSD , uses as boot volumes (1 GB - 16 TB)
+   * io1 / io2 (SSD) Block express - highest performance SSD , mission critical , low latency or high throughput worklods , uses as boot volumes [database workloads]
+   * st1 (HHD) , low cost , designed for frequencyt accessed , throughput intensive workload , cannot be used for boot volume
+   * sc1 (HHD) , lowest cost , cannot be used for boot volume
+- EBS Volume Multi Attach (only possible with io1/io2 family)
+   * possible , EBS volume to multiple EC2 in same AZ
+   * Full read and write permission , upto 16 instance at a time#
+   * file system must be cluster aware  
+
 
 #### AMI (Amazon Machine Image)
 - custome EC2 instance
