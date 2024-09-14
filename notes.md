@@ -133,3 +133,13 @@
 - ELB Connection draining or Deregistration delay (ALB & NLB) , time to complete in-flight requests , 1 t0 3600 seconds range (default : 300s)
 
 #### ASG (Auto Scalaing Group)
+- Scalate out to match incresed load
+- Scale in to match decresed load
+- Recreate in case desired number is terminated
+- Min , max , desired capacity (think)
+- Launch template (terraform)
+- CloudWatch alarm & scaling (monitor metrics (CPU utilization) trigger instances)
+- Scaling Policies :
+   * Dynamaic Scaling (Traget tracking (CPU = 40% unitlization) , Simple/Step ( CPU > 70% , add 2 instance) )
+   * Scheduling Scaling (scaling on known usage pattern , 10 - 5 PM on Friday , scale up )
+   * Predective Scaling (forcast and scale up/down)
