@@ -145,3 +145,12 @@
    * Predective Scaling (forcast and scale up/down)
 - Metrics : CPU Utilization , RequestCountPerTarget , Average Network In / Out , Custom metrics too
 - Tip : use ready to use AMI to reduce bootup time
+
+#### RDS + Aurora + ElasticCache
+- RDS (Relational Databse Server) : Postgres , MySQL , Maria DB , Oracle , Microsoft SQL Server , IBM DB2 , Aurora
+- Managed service : provisioning , OS patching , backup , monitoring , Multi AZ for DR , scaling capabiliteis , cannot SSH on host
+- Storage Auto scaling - RDS DB instance dynamically [set Maximum Storage Threshold]
+- Read Replicas - reads scaling (selects only) , max 15 read replicas , can be in (with in AZ , cross AZ or cross region (cost , west -> east)) , replication is ASYNC (evental consistent) , prmote to their own DB
+- Multi AZ (Disater Recovery) : SYNC replication , one DNS name , increse availability , automatic failover to standby , no read/write on standby
+- Single to Multi AZ - no down time , click modify on database [sanpshot , upload to new database , start replication]
+  
