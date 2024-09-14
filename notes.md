@@ -128,5 +128,8 @@
 - Type : application-based cookie (custome n application) , duration based cookie
 - Cross-Zone Load Balancing(CZLB) - LB distribute evenly across all registered instances in all AZ [ 50/50 , all nodes gets 10 each , without CZLB  50/50 , all nodes gets disproportionate]
 - ALB (default , no extra charges) , NLB & GLB (disable by default , extra for inter AZ data if enabled)
+- SSL/TLS - allows to encrypt traffic b/w client and server
+- SNI - Server Name Indication , supported by ALB , NLB n CloudFront
+- ELB Connection draining or Deregistration delay (ALB & NLB) , time to complete in-flight requests , 1 t0 3600 seconds range (default : 300s)
 
 #### ASG (Auto Scalaing Group)
