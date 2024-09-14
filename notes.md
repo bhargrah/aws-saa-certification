@@ -144,3 +144,4 @@
    * Scheduling Scaling (scaling on known usage pattern , 10 - 5 PM on Friday , scale up )
    * Predective Scaling (forcast and scale up/down)
 - Metrics : CPU Utilization , RequestCountPerTarget , Average Network In / Out , Custom metrics too
+- Tip : use ready to use AMI to reduce bootup time
