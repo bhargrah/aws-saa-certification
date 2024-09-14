@@ -200,6 +200,7 @@
    * Weighted - control the % of requests that go to each specific resource , multiple records each has weight associated
    * Latency - Redirects to resource that has the least latecy to us 
    * Failover - Primary-Secondary records , moment health is red then DNS route the request to secondary (actual 2 records created)
-   * Geolocation
-   * Multi-Value Answer
-   * Geoproximity 
+   * Geolocation - routing is based on user location
+   * Geoproximity - to shidt more traffic to resource based on the defined bias [expand (1 to 99) , shrink(-1 to -99)] , think US , control east cost and west cost region
+   * IP Based - Routing is based on client IP address 
+   * Multi-Value Answer - return multiple values /resorces , can return 8 recods , remove unhealthy resource 
