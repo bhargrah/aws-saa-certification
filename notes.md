@@ -120,5 +120,11 @@
 - ALB (target group ( EC1 , EC2) )
 - NLB : Layer 4 (TCP & UDP) , million of request/sec , ultra-low latency , one static IP per AZ , can assign elastic IP , extream performance
 - NLB (target group) :  EC2 , IP address (must be private) , ALB , health checks configured using TCP , HTTP , HTTPS
+- GLB : Layer 3 (IP Packet) :  deploy , scale and manage a fleet of 3rd party network virtual appliances
+- GLB - Firewalls , Intrusion detection and prevention system , deep packet inspection , payload manipulation
+- GLB - GENEVE protocol on port 6081
+- GLB (target group) :  EC2 , IP address (must be private) only
+- Sticky Session (session affinity) CLB . ALB and NLB (not use cookie) 
+- Type : application-based cookie (custome n application) , duration based cookie 
 
 #### ASG (Auto Scalaing Group)
