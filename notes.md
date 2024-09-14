@@ -143,3 +143,4 @@
    * Dynamaic Scaling (Traget tracking (CPU = 40% unitlization) , Simple/Step ( CPU > 70% , add 2 instance) )
    * Scheduling Scaling (scaling on known usage pattern , 10 - 5 PM on Friday , scale up )
    * Predective Scaling (forcast and scale up/down)
+- Metrics : CPU Utilization , RequestCountPerTarget , Average Network In / Out , Custom metrics too
