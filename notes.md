@@ -179,3 +179,17 @@
 - RDS Proxy : allow apps to pool and share DB connections , improve DB efficiency by reducing stress on databases resource , minimize open connection
 - RDS proxy - serverless , autoscaling , HA , reduce failover time by 66% , no code change in apps , enforce IAM authenticate by leveraging AWS secret manager
 - ElasticCache : managed Redis or Memcached , help with read intensive workloads , cache hit/miss scenarios
+
+#### Route 53
+- DNS (Domain Name System) , translate hostname to machine IP address
+   * Domain Registrar (eg GoDaddy) ,
+   * DNS Records - A,AAAA,CNAME
+   * Zone File - contains DNS records
+   * Name Server - resolvs DNS queries 
+   * Top Level Doamin - .com, .us, .in 
+   * Second level domain - amazon.com , google.com
+- Route 53 - HA , scalablae , fully managed and authoritative DNS (customer can update DNS records)
+- Its also a domain registrara , can check helth of resources , only service with 100% availability SLA
+- Records - (Domain/subdomain , Record Type , Value , Routing Policy , TTL)
+    * Record Type (A - maps a hostname to IPv4 , AAAA - maps to IPv6 , CNAME - maps hostname to another hostname ,  NS - name server )
+    * Hosted Zones - Public (open to public) & Private (company internal network)
