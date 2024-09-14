@@ -153,5 +153,15 @@
 - Read Replicas - reads scaling (selects only) , max 15 read replicas , can be in (with in AZ , cross AZ or cross region (cost , west -> east)) , replication is ASYNC (evental consistent) , prmote to their own DB
 - Multi AZ (Disater Recovery) : SYNC replication , one DNS name , increse availability , automatic failover to standby , no read/write on standby
 - Single to Multi AZ - no down time , click modify on database [snapshot , upload to new database , start replication]
-- RDS Custom - Oracle & Microsoft SQL only, self manage instance patching , install patches , access EC2 instance 
+- RDS Custom - Oracle & Microsoft SQL only, self manage instance patching , install patches , access EC2 instance
+- Aurora : proprietary tech from AWS , Postres and MySQL supported
+- Aurora , cloud optimized , 5X perf over MySQL , #X perf over Postgres
+- Auotmatically grows in 10GB increments , upto 128 TB 15 read replicas , sub 10ms latency 
+- HA and failover , 20% expecnsive cost
+- Self healing with peer-to-peer replication , storage striped across 100s of volumes
+- master , 15 read replication , 30 sec failover
+- Writer Endpoint  ( Master , transparet to client) only for writing
+- Reader Endpoint  ( Read Replica , transparet to client) , read replica can autoscale
+- Custom endpoint (Analytical queries)
+- Auror Serverless : Automated databases , auto scaling , infrequent , intermittent or unpredectible workfloads , pay per second , can be cost effective
   
