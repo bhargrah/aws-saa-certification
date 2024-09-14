@@ -164,4 +164,7 @@
 - Reader Endpoint  ( Read Replica , transparet to client) , read replica can autoscale
 - Custom endpoint (Analytical queries)
 - Auror Serverless : Automated databases , auto scaling , infrequent , intermittent or unpredectible workfloads , pay per second , can be cost effective
+- Global Aurora :
+   * Primary region(read/write) , 5 secondary , 1 sec replication lag
+   * Typical corss-region replication takes less than 1 second
   
