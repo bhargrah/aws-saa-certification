@@ -95,7 +95,7 @@
 #### EFS : Elastic File System
 - Managed NFS(network file system) that can be mounted on many EC2
 - EFS works with EC2 in multi-AZ
-- Higly available , scalable , expecnsive (3x gp3) , pay per use , no capacity planning
+- Higly available , scalable , expensive (3x gp3) , pay per use , no capacity planning
 - Use : web serving , data sharing , wordpress
 - Security group for control access , encryption at rest
 - Linux AMI only not with windows
