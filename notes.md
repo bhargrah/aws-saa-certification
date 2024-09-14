@@ -126,7 +126,7 @@
 - GLB (target group) :  EC2 , IP address (must be private) only
 - Sticky Session (session affinity) CLB . ALB and NLB (not use cookie) 
 - Type : application-based cookie (custome n application) , duration based cookie
-- Cross-Zone Load Balancing(CZLB) - LB distribute evenly across all registered instances in all AZ [ 50/50 , all nodes gets 10 each , without CZLB  50/50 , all nodes gets disprorotionate]
+- Cross-Zone Load Balancing(CZLB) - LB distribute evenly across all registered instances in all AZ [ 50/50 , all nodes gets 10 each , without CZLB  50/50 , all nodes gets disproportionate]
 - ALB (default , no extra charges) , NLB & GLB (disable by default , extra for inter AZ data if enabled)
 
 #### ASG (Auto Scalaing Group)
