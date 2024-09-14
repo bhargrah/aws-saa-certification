@@ -172,4 +172,7 @@
    * Manual - Triggered by user , can retain as long as you want 
 - Aurora Backup :
    * Automated - 1 to 35 retrention cannot be disaible , point in time recovery in that timeframe
-   * Manual - Triggered by user , can retain as long as you want 
+   * Manual - Triggered by user , can retain as long as you want
+- Restore : from snapshot , S3 , Percona XtraBackup (on premise to aurora)
+- Database Cloning : copy-on-write protocol , faster
+- Security : At rest encryption - AWS KMS (master & replicas) , in-flight encryption - TLS ready by default , IAM authenticate , security group 
