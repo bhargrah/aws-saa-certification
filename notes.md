@@ -175,4 +175,6 @@
    * Manual - Triggered by user , can retain as long as you want
 - Restore : from snapshot , S3 , Percona XtraBackup (on premise to aurora)
 - Database Cloning : copy-on-write protocol , faster
-- Security : At rest encryption - AWS KMS (master & replicas) , in-flight encryption - TLS ready by default , IAM authenticate , security group 
+- Security : At rest encryption - AWS KMS (master & replicas) , in-flight encryption - TLS ready by default , IAM authenticate , security group
+- RDS Proxy : allow apps to pool and share DB connections , improve DB efficiency by reducing stress on databases resource , minimize open connection
+- RDS proxy - serverless , autoscaling , HA , reduce failover time by 66% , no code change in apps , enforce IAM authenticate by leveraging AWS secret manager 
