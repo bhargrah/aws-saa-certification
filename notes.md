@@ -193,3 +193,13 @@
 - Records - (Domain/subdomain , Record Type , Value , Routing Policy , TTL)
     * Record Type (A - maps a hostname to IPv4 , AAAA - maps to IPv6 , CNAME - maps hostname to another hostname ,  NS - name server )
     * Hosted Zones - Public (open to public) & Private (company internal network)
+- TTL (Time to live , clients will cache the results) , think of high and low TTL value
+- Alias Records - Maps hostname to an AWS resource , can be used for zone apex , always of type A /AAAA
+- Routing Policies (put on the records)
+   * Simple - routes traffic to single resource , if multiple IPs retured , client have to choose one , no health check 
+   * Weighted - control the % of requests that go to each specific resource , multiple records each has weight associated
+   * Latency - Redirects to resource that has the least latecy to us 
+   * Failover - Primary-Secondary records , moment health is red then DNS route the request to secondary (actual 2 records created)
+   * Geolocation
+   * Multi-Value Answer
+   * Geoproximity 
