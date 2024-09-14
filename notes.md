@@ -163,8 +163,13 @@
 - Writer Endpoint  ( Master , transparet to client) only for writing
 - Reader Endpoint  ( Read Replica , transparet to client) , read replica can autoscale
 - Custom endpoint (Analytical queries)
-- Auror Serverless : Automated databases , auto scaling , infrequent , intermittent or unpredectible workfloads , pay per second , can be cost effective
+- Auror Serverless : Automated databases , auto scaling , (infrequent , intermittent or unpredectible) workfloads , pay per second , can be cost effective
 - Global Aurora :
    * Primary region(read/write) , 5 secondary , 1 sec replication lag
    * Typical corss-region replication takes less than 1 second
-  
+- RDS Backup :
+   * Automated - Daily backup (during work window), Trnasaction logs backedup every 5 min , 1 to 35 retrention , set 0 to disable backup
+   * Manual - Triggered by user , can retain as long as you want 
+- Aurora Backup :
+   * Automated - 1 to 35 retrention cannot be disaible , point in time recovery in that timeframe
+   * Manual - Triggered by user , can retain as long as you want 
