@@ -114,7 +114,11 @@
 - LB , server forwards to mupltiple servers
 - Benifits : single point of acces (DNS) , handle failure of downstream , regular heath check , provides SSL termination , enforce stikiness with cookie, HA
 - ELB , managed load balancer , cost less to setup ,integrate with AWS offerings
-- Types : Classic Load Balancer(old) , Application Load Balancer , Network Load Balancer , Gateway Load Balancer
-- 
+- Types : Classic Load Balancer(old) , Application Load Balancer(ALB) , Network Load Balancer(NLB) , Gateway Load Balancer(GLB)
+- ALB : Layer 7 (HTTP) , supports HTTP/2 & WebSocket , redirects HTTP & HTTPs , routing based on URL , hostname , query string n headers (/id=123 etc)
+- ALB (target group) :  EC2 , ECS tasks , Lambda fucntions , IP address (must be private) , great fit for microservice architecture
+- ALB (target group ( EC1 , EC2) )
+- NLB : Layer 4 (TCP & UDP) , million of request/sec , ultra-low latency , one static IP per AZ , can assign elastic IP , extream performance
+- NLB (target group) :  EC2 , IP address (must be private) , ALB , health checks configured using TCP , HTTP , HTTPS
 
 #### ASG (Auto Scalaing Group)
