@@ -106,4 +106,15 @@
 - Storage Tiers
    * standard : 
    * infrequent access : cost to retrieve
-   * archive : few time a year , 50% cheaper 
+   * archive : few time a year , 50% cheaper
+
+#### ELB (Elastic Load Balancing)
+- vertical scaling : increase instance size (scale up/dowm) (typically done for databases)
+- horizontal scaling : increse number of instances (scala in/out)
+- LB , server forwards to mupltiple servers
+- Benifits : single point of acces (DNS) , handle failure of downstream , regular heath check , provides SSL termination , enforce stikiness with cookie, HA
+- ELB , managed load balancer , cost less to setup ,integrate with AWS offerings
+- Types : Classic Load Balancer(old) , Application Load Balancer , Network Load Balancer , Gateway Load Balancer
+- 
+
+#### ASG (Auto Scalaing Group)
