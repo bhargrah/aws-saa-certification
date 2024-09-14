@@ -152,5 +152,5 @@
 - Storage Auto scaling - RDS DB instance dynamically [set Maximum Storage Threshold]
 - Read Replicas - reads scaling (selects only) , max 15 read replicas , can be in (with in AZ , cross AZ or cross region (cost , west -> east)) , replication is ASYNC (evental consistent) , prmote to their own DB
 - Multi AZ (Disater Recovery) : SYNC replication , one DNS name , increse availability , automatic failover to standby , no read/write on standby
-- Single to Multi AZ - no down time , click modify on database [sanpshot , upload to new database , start replication]
+- Single to Multi AZ - no down time , click modify on database [snapshot , upload to new database , start replication]
   
