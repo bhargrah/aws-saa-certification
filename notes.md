@@ -203,4 +203,18 @@
    * Geolocation - routing is based on user location
    * Geoproximity - to shidt more traffic to resource based on the defined bias [expand (1 to 99) , shrink(-1 to -99)] , think US , control east cost and west cost region
    * IP Based - Routing is based on client IP address 
-   * Multi-Value Answer - return multiple values /resorces , can return 8 recods , remove unhealthy resource 
+   * Multi-Value Answer - return multiple values /resorces , can return 8 recods , remove unhealthy resource
+
+ #### S3 
+ - Use : Backup & storage , disaster recovery , archive , hybrid cloid storage , application hosting , media hoisting , data lakes , software delivery , static website
+ - S3 : store objects (files) in buckets (directories) , globally unique name , defined on regional level
+ - Objects : files have key , key is FULL path , prefix + object name (s3://my-buket/job/jp/resume.doc)
+ - Max size 5TB (5000GB) , use multi-part upload
+ - Metadata , Tags , version ID
+ - Security : Bucket Policy (gets attached to bucket only)
+    * User Based (IAM Policies - control which API calls allowed)
+    * Resource Based (Bucket Policies - bucket wide rules from S3 console, Object Access control list (finer grain) , Bucket Access Control list (less common))
+    * Encryption
+    * Bucket Policies (JSON based , resorce - bucket & object , effect - allow/deny , actions : det API to allow/deny)
+- Versioning : Version files , enabled at bucket level , protect against unintented deletes , easy roll back , null version (if versioning enabeld in b/w)
+- 
