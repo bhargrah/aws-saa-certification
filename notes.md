@@ -221,7 +221,7 @@
 - Replication only enables for new items , S3 Batch replication (replicate existing objects) , can replicate delete markers too , no chaining of buckets
 - Storage Class
     * Genereal Purpose (99.99% Av , used fr frequently acceessed data, Low latency n high throughput , sustain 2 concurrent faciclity failuers)
-    * Standard-Inferquenct Access ( 99.9% availability , less frequently accessed , requird rapid access , lower cost than S3 standard , UC - disaster recovery , backups)
+    * Standard-Inferquent Access ( 99.9% availability , less frequently accessed , requird rapid access , lower cost than S3 standard , UC - disaster recovery , backups)
     * One Zone-Infequent acess (99.9(11)% durability in single AZ , data lost if AZ destroyed , 99.5% availability , UC - secondary copy of data)
       [Glacier : Low cost object storage for archival/backup , pricing : price for storage + object retrival cost]
     * Glacier Instance retrival (milli second retrival , great for data access one a quater , min storage duration 90 days)
@@ -234,4 +234,20 @@
         * Archive Access (optional): configurable from 90 days to 700+ days
         * Deep Archive Access (optional): confi from 180 days to 700+ days
 - Durability : (high , 11 9's) | Availability : measures redily avaiable a service is , depends upon storage class
-- 
+- Lifecycle rules controls the transition b/w storage classes
+- Lifecycle Rule - Transition actions , Expriration actions , certain prefix , can use tags also
+- S3 analytics , run on S3 bucket , updated daily
+- S3 requestor pays - client or user pays for the downloading objetcs for S3 bucket
+- S3 events notification - S3:ObjectCreate (S3 events --> SNS , SQS n Lambda Function notification targets) + EventBridge too (new)
+- S3 event - IAM permissoin , SNS , SQS & lambda resource policy needed ( no IAM roles )
+- S3 performance - automatically scales to request rates , latency 100-200 ms [3500 PUT/COPY/POST/DELETE or 5500 GET/HEAD request /sec / prefix ]
+- No limit to the mumber of prefixes in a bucket , if reads are spread across prefixes then we can achive more GET
+- Multi part upload (> 100MB , must use > 5 GB) , help praallelize speed
+- S3 transfer acceleration (increase transfer speed by transferring file to AWS edge location then forward data to S3 traget bucket)
+- Fetches - S3 byte-Range fetches (parallelize GETs by requesting specific byte ranges) , think for header fetch question
+- S3 batch operation - perform bulk operations on existing S3 objects (e.g encrypt un-encrypt objects)
+- Prcoess : use S3 inventory to get object list and use S3 select to filter you objetcs , gives to S3 batch operation
+- S3 Storage lense
+    * general insigts about your S3 storage
+    * StorageByte , object count
+
