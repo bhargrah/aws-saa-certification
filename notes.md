@@ -206,7 +206,7 @@
    * Multi-Value Answer - return multiple values /resorces , can return 8 recods , remove unhealthy resource
 
  #### S3 
- - Use : Backup & storage , disaster recovery , archive , hybrid cloid storage , application hosting , media hoisting , data lakes , software delivery , static website
+ - Use : Backup & storage , disaster recovery , archive , hybrid cloud storage , application hosting , media hoisting , data lakes , software delivery , static website
  - S3 : store objects (files) in buckets (directories) , globally unique name , defined on regional level
  - Objects : files have key , key is FULL path , prefix + object name (s3://my-buket/job/jp/resume.doc)
  - Max size 5TB (5000GB) , use multi-part upload
@@ -217,4 +217,21 @@
     * Encryption
     * Bucket Policies (JSON based , resorce - bucket & object , effect - allow/deny , actions : det API to allow/deny)
 - Versioning : Version files , enabled at bucket level , protect against unintented deletes , easy roll back , null version (if versioning enabeld in b/w)
+- Replication (CRR (Cross region replication) & SRR (same region replicatoin)) , must give proper IAM permission to S3 , asyncronus replication
+- Replication only enables for new items , S3 Batch replication (replicate existing objects) , can replicate delete markers too , no chaining of buckets
+- Storage Class
+    * Genereal Purpose (99.99% Av , used fr frequently acceessed data, Low latency n high throughput , sustain 2 concurrent faciclity failuers)
+    * Standard-Inferquenct Access ( 99.9% availability , less frequently accessed , requird rapid access , lower cost than S3 standard , UC - disaster recovery , backups)
+    * One Zone-Infequent acess (99.9(11)% durability in single AZ , data lost if AZ destroyed , 99.5% availability , UC - secondary copy of data)
+      [Glacier : Low cost object storage for archival/backup , pricing : price for storage + object retrival cost]
+    * Glacier Instance retrival (milli second retrival , great for data access one a quater , min storage duration 90 days)
+    * Glaciuer flexible retrival (Mode - Expediated (1 to 5 min) | Standard (3 to 5 hr) | Bulk (5 to 12 hr) , bulk is free ) , min storage duration 90 days
+    * Glacier deep archive (long term storage ( Standard (12 hr) | Bulk (48 hr) )) , min storage duration of 180 days
+    * Intelligent tiering (small monthly fees , move object automaticallt b/w access tiers based on usage , no retrival charges)
+        * Frequest Access (automatic) : default tier
+        * Infrequent Access (automatic): object not access for 30 days
+        * Archive Instant Access (automatic): object not access for 90 days
+        * Archive Access (optional): configurable from 90 days to 700+ days
+        * Deep Archive Access (optional): confi from 180 days to 700+ days
+- Durability : (high , 11 9's) | Availability : measures redily avaiable a service is , depends upon storage class
 - 
