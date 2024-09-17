@@ -205,7 +205,7 @@
    * IP Based - Routing is based on client IP address 
    * Multi-Value Answer - return multiple values /resorces , can return 8 recods , remove unhealthy resource
 
- #### S3 
+ #### S3 (simple storage service)
  - Use : Backup & storage , disaster recovery , archive , hybrid cloud storage , application hosting , media hoisting , data lakes , software delivery , static website
  - S3 : store objects (files) in buckets (directories) , globally unique name , defined on regional level
  - Objects : files have key , key is FULL path , prefix + object name (s3://my-buket/job/jp/resume.doc)
@@ -250,4 +250,6 @@
 - S3 Storage lense
     * general insigts about your S3 storage
     * StorageByte , object count
-
+      
+#### S3 : Encryption 
+- 
