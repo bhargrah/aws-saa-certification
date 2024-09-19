@@ -356,5 +356,35 @@
      * SQS access policy needs to be configured for SNS to write
      * Fan out ordered : SNS FIFO topic --> SQS FIFO Queue
      * Message filtering , policy to filter msg, think Order (NEW , COMPLETED , CACNELLED) , filter policy can be applied to routed msg to diffrent nodes/service 
-- Kinesis : Real Time s
+- Kinesis : Real Time Streaming
+     * Makes it easy to collect , process and analyze streaming data in real-time
+     * Use : application logs , metrics , website clickstreams, IOT telemetry
+     * Kinesis Data Streams (KDS) : capture , process and store data streams
+        * Streams have shards (1... n) , typically decided create time
+        * Producer sends Recods [Partition Kay , Data Blob (up to 1 MB)] , rate 1MB/sec or 1000 msg/sec per shard
+        * Eg , 6 shards , rate will be 6 * 1000 ~ 6000 msg/sec
+        * Consumer (Apps , Lambda , KDF , KDA) , also consumes records out of KDS
+        * Record [Partition Kay , Sequence No. , Data Blob] , 2 MB/sec (shared) per shard all consumers , 2 MB/sec (enhacned) per shared per consumers
+        * Data retention (1 day to 365 days) , can replay data
+        * data cant be deleted (immutability) , data goes to same shard (ordering)
+        * Mode - Provisioned (pay per shard per hour) and On-Demand (pay per stream per hour & data in/out per GB)
+        * Encryption : in-flight using HTTPS endpoint , at-rest using KMS keys , client side encryption (hard)
+        * Access , IAM policies | VPC endpoint from Kinesis | Monitor API calls using CloudTrail 
+     * Kinesis Data Firehose (KDF) : load data streams into AWS data stores (load streaming)
+        * Record (upto 1MB) , takes data and writes in batches , integrate with lambda
+        * Destination - Amazon S3 , Amazon Redshift , Amazon OpenSearch | 3 rd partner destination (data dog , splunk etc ) | custome destination (HTTP endpoint)
+        * Fully managed , no administration , automatic scaling , serverless
+        * Pay for dtaa going through Firehose
+        * Near real time : buffer intrerval 0 sec to 900 seconds
+        * Buffer size : minium 1 MB
+        * Many data formatcs , conversion , complression
+        * Support cusome data transformation using AWS Lambda
+        * Can send failed or all data to a backup S3 bucket
+        * no replay capability
+     * Kinesis Data Analytics (KDA) : analyze data streams with SQL or Apache Flink
+     * Kinesis Video Streams : capture , process and store video streams
 - Active MQ
+   * managed MQ message broker service - RabbitMQ , ActiveMQ
+   * this cant scale as mush as SQS/SNS
+   * can run on server in muti-az failover
+   * has both queue feature and topic feature 
