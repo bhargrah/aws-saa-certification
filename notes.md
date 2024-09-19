@@ -251,5 +251,44 @@
     * general insigts about your S3 storage
     * StorageByte , object count
       
-#### S3 : Encryption 
-- 
+#### S3 : Encryption (SSE - Server Side Encryption)
+- SSE - S3
+   *  Encryption using keys handled , maanged and oned by AWS
+   *  Object is encryptrd server-side , type AES-256
+   *  Set header "x-amz-side-encryption":"AES256"
+   *  Default for new buckets & objects
+- SSE - KMS
+   *  Encryption using keys handled , managed by AWS KMS (key management service)
+   *  Advandatge : user control + audit key usage using CloudTrail
+   *  Set header "x-amz-side-encryption":"aws:kms"
+   *  Limitation - GenerateDataKey KMS API , calls Decrypt KMS API , KMS quota per sec 5500 , 10000 , 30000 req/sec (region based) , can ask for increase
+- SSE - C
+   * Encryption keys fully managed by cutomer outside AWS
+   * S3 does NOT store encryption key you provided
+   * HTTPS must be used , key to be provided every time by client 
+- Client Side Encryption
+   * Use client libraries such as Amazon S3 Client-Side Encryption Library
+   * Client must encrypt data themselves before sending to S3
+   * Client must decrypt data themselves when retriving from Amazon S3
+   * Customer fully managed the keys and encryption cycle
+- Encryption in transit (SSL/TLS)
+   * S3 exposed two endpoints - HTTP (non encrypted) & HTTPS (encrypted)
+   * HTTPS is recommended 
+- Enforce Encryption in transit (aws:SecureTransport) , attach policy
+- S3 Access logs - request to S3 bucket can be logged into another S3 bucket for auditing.
+- S3 glacier Vault Lock
+    * Adpot WORM (Write Once Read Many) model
+    * Vault Lock Policy , Locks the policy for future edits , helps for compliance and data retention
+- S3 Object Lock (Versining must be enabled)
+    * Adpot WORM (Write Once Read Many) model
+    * Block object version delettion for a specific amount of time
+    * Retention Mode - Compliance (super super strict mode)
+       * Object version can't be overwritten or dleted by any user , including root user
+       * Object retention modes can't be chnaged and retention periods can't be shortened
+    * Retention Mode - Governance 
+       * Most users can'toverwrite or dleted an object or alter lock settings
+       * Some user have special permissoin to change retention
+    * Retention Period : protect the obejct for fixed period , can be extended
+    * Legal Hold : protect the object indefinnately , indepednet from retention period ( can be place/removed by s3:PutObjectLegalHold IAM permission)
+- S3 Access Points : Policy , R/W to specicfic prefix , each access has its own permission (fianance , sales , traders etc), security management , own DNS (private/public)
+- S3 Object Lambda : perfrom operation on objects via lambda (S3 access lambda access points)
