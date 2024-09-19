@@ -342,5 +342,19 @@
     * Long Polling - wait during polling , decrese number of API calls , reduce latency of your application
     * Wait time (1 sec - 20 sec) , enabled at queue level or at API level using WaitTimeSeconds 
 - SNS (Simple Notification Service)
+    * one message to many service , pub/sub , SNS topic
+    * producer sends message to one SNS topic , then event recievers (subscriptions)
+    * 1,25,00,000 subscription per topic
+    * Many AWS service can publish message to SNS
+    * How to publish :
+        * Topic Publish (SDK) (Create a topic , create a susbcription , publish to the topic)
+        * Direct Publish (mobile apps SDK) (create platform application , create platfoprm endpoint , publish to platform endpoint)
+    * Encryption : in-flight using HTTPSAPI , at-rest using KMS keys , client side encryption (if clients wants to control it)
+- Fan Out pattern : SNS + SQS
+     * Service --> SNS Topic --> SQS1 , SQS2 --> Service1 n Service2
+     * Fully decopled , no data loss , delayed processing , reties , add more SQS subscriber over time
+     * SQS access policy needs to be configured for SNS to write
+     * Fan out ordered : SNS FIFO topic --> SQS FIFO Queue
+     * Message filtering , policy to filter msg, think Order (NEW , COMPLETED , CACNELLED) , filter policy can be applied to routed msg to diffrent nodes/service 
 - Kinesis : Real Time s
 - Active MQ
