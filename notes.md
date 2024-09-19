@@ -319,3 +319,22 @@
    * consistent performance (intelligent routing to lowest latency n regoinal failover , no issue with client cache , intennal AWS network)
    * Health checks , failover less than 1 minute , greate for disater recovery
    * Security , only 2 external IO needed , DDOs protection via AWS shield
+- Global Accelerator : improves perfromance over TCP or UDP , good fit for non-HTTP , gaming , IOT or VoiIP
+
+#### SQS , SNS , Kinesis , Active MQ 
+- Aysnchronus communication , decouple applications  
+- SQS (Simple Queue Service) : Queue Model 
+    * Producer (multiple) send msg, Consume (multiple) poll msg
+    * Standard queue (10 yr old) , fully manages service
+    * Unlimeited throughput , unlimited number of message in queue
+    * Default retention - 4 days ,max 14 days
+    * Low laetncy (<10ms , pub , recive) , 265 KB per message
+    * Atleast once delivery , typically not ordered , best effort ordering
+    * Consumer : EC2 instance , AWS lambda etc , delete happens using DeleteMessageAPI
+    * ASG , trigger cloudWatch metric - queue length , scale horizontally , more node if lenght > 1000 eg
+    * Encryption : in-flight using HTTPSAPI , at-rest using KMS keys , client side encryption (if clients wants to control it)
+    * Access Controls : IAM policies to regulate access to SQS API
+    * SQS Access Policies : Corss-account access to SQS queues , useful for allowing other services to write to an SNS queue
+- SNS (Simple Notification Service)
+- Kinesis : Real Time s
+- Active MQ
