@@ -293,7 +293,7 @@
 - S3 Access Points : Policy , R/W to specicfic prefix , each access has its own permission (fianance , sales , traders etc), security management , own DNS (private/public)
 - S3 Object Lambda : perfrom operation on objects via lambda (S3 access lambda access points)
 
-#### CloudFront & AWS Global Accelerator
+#### CloudFront & AWS Global Accelerator (global)
 - Content Delivery Network (CDN) , improves read perfromace , contect is cache at edge
 - Improved user experice , 216 points , DDoS protection
 - Origins
@@ -306,3 +306,9 @@
        * Application Load balancer
        * E3 instance
        * S3 website (bucket should be static S3 website) 
+- All the content needs to be publicly avaibale , Geo restrictions (allow/block list)
+- Pricing , cost of data out per edge locations varies (india most expecnsive)
+- Price classes
+    * Price class All - all regions - best performance 
+    * Proce class 200 - most regions , but excluide the most expensive regions 
+    * Price class 100 - only the least expecnsivbe regions 
