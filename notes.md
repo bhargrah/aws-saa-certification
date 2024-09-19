@@ -292,3 +292,17 @@
     * Legal Hold : protect the object indefinnately , indepednet from retention period ( can be place/removed by s3:PutObjectLegalHold IAM permission)
 - S3 Access Points : Policy , R/W to specicfic prefix , each access has its own permission (fianance , sales , traders etc), security management , own DNS (private/public)
 - S3 Object Lambda : perfrom operation on objects via lambda (S3 access lambda access points)
+
+#### CloudFront & AWS Global Accelerator
+- Content Delivery Network (CDN) , improves read perfromace , contect is cache at edge
+- Improved user experice , 216 points , DDoS protection
+- Origins
+   * S3 bucket
+       * distributuibng files and caching them at edge
+       * enhance security with cloudfront Origin Access Control (OAC)
+       * OAC is replacing Origin Access Identity (OAI)
+       * CloudFront can be used as an ingress (to upload files to S3)
+   * Custome Origin (HTTP)
+       * Application Load balancer
+       * E3 instance
+       * S3 website (bucket should be static S3 website) 
