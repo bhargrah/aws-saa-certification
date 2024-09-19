@@ -312,3 +312,10 @@
     * Price class All - all regions - best performance 
     * Proce class 200 - most regions , but excluide the most expensive regions 
     * Price class 100 - only the least expecnsivbe regions 
+- Cache Invalidations - TTL can get expired , refresh cache via CloudFront Invalidation (all files or specific files)
+- Global Accelerator (anycast IP , route to nearest node / machine)
+- Leverages internal private AWS network to route to your application
+- Works with Elastic IP , EC2 instance , ALB , NLB , public or private
+   * consistent performance (intelligent routing to lowest latency n regoinal failover , no issue with client cache , intennal AWS network)
+   * Health checks , failover less than 1 minute , greate for disater recovery
+   * Security , only 2 external IO needed , DDOs protection via AWS shield
