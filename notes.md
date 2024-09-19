@@ -335,6 +335,12 @@
     * Encryption : in-flight using HTTPSAPI , at-rest using KMS keys , client side encryption (if clients wants to control it)
     * Access Controls : IAM policies to regulate access to SQS API
     * SQS Access Policies : Corss-account access to SQS queues , useful for allowing other services to write to an SNS queue
+    * FIFO Queue - maintains order , low thoughtput - 300msg/sec without batching , 3000 msg/sec with batching
+    * exactly-once send capability , msg processed in order by consumer
+    * Message Visiblity Timeout - 30 sec , message has to be processed , other consumer cant see that message, post 30 sec , it will be avaialble again for consumption
+    * consumer can use , changeMessageVisibility API , to increse time , so that other consumer avoid reading it (high / low , think) , we may get duplicate
+    * Long Polling - wait during polling , decrese number of API calls , reduce latency of your application
+    * Wait time (1 sec - 20 sec) , enabled at queue level or at API level using WaitTimeSeconds 
 - SNS (Simple Notification Service)
 - Kinesis : Real Time s
 - Active MQ
