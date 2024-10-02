@@ -388,3 +388,17 @@
    * this cant scale as mush as SQS/SNS
    * can run on server in muti-az failover
    * has both queue feature and topic feature 
+
+#### Container on AWS : ECS (Elastic Container Service) , Fargate, ECR(Elastic Container Registry) & EKS(Elastic Kuberbetes Service)
+- Docker - Docker repsitories - Docke HUB and Amazon ECR (Elastic Container Registry)
+- Sort of virtualization Host OS -> Hypervisor -> Docker Daemon -> Docker container
+- Docker file -- docker image -- push -- > docker repositories
+- ECS (Elastic Container Service)
+   * Launch ECS tasks on ECS cluster
+   * EC2 instance , each has ECS agent and register itself with ESC cluster.
+   * AWS then take care of starting and stoping the container spawned inside EC2.
+   * Fargate -  Not provision infrastructure , serverless
+   * EC2 instanc profile role (use by ECS agent , make API call to ECS service , pull docker image)
+   * ECS Task Role - task specific role , define in task definition
+   * Data volumes (use EFS) - compatible both EC2 or Fargate mode
+   * S3 cannot be mounted for ECS tasks
