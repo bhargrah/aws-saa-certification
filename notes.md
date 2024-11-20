@@ -426,3 +426,21 @@
    * Easy pricing
    * Integrated with other services
    * Many programing languages (Node.js , Pythin , Java , Ruby , custome runtime -- Rust n Golang)
+   * Memeory allocation : 128 MB - 10 GB (1 MB increment)
+   * Maximum execution time : 900 seconds (15 min)
+   * Environment variable (4 KB)
+   * Concurrenct execution : 1000 (can be increased)
+   * Lambda function deployment size : 50 MB
+   * Uncompressed deplyment : 250 MB 
+
+- Lambda
+   * Function perfronce upto 10x at no extra cost for Java 11 and above
+   * Function is invoked from pre-initialized state
+   * Lambda initialize function -> Snapshot tkane of memeory and disk state -> Snapshot cached for low latency
+ 
+- Cloud Front
+   * CloudFront Functions(JavaScript only) & Lambda@Edge (Node.js , python)
+   * Pay only for what you use and fully serverless
+   * Use case : Security & privacy , Search engine optimzation , A/B testing etc
+   * CloudFront : Cache key normalization , Header manipulation , URL rewrites or redirects , Request authentication and authorization (everythign less than 1 ms)
+   * Lambda@Edge : Longer execution time (several ms) , Adjust CPU or memory , Network access to use external service , file system access or access to HTTP request body
