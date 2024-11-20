@@ -417,3 +417,5 @@
    * Fully managed service that makes it easy to deploy web application
    * No infra experice required , start with source code or container image
    * Use case , web apps , APIs , microservices etc 
+
+#### Serverless (Lambda , DynamoDB , API Gateway , Cognito)
