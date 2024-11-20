@@ -419,3 +419,10 @@
    * Use case , web apps , APIs , microservices etc 
 
 #### Serverless (Lambda , DynamoDB , API Gateway , Cognito , S3 , SNS & SQS , Aurora , Step function , Fargate)
+- Lambda
+   * Virtual function - no servers to manage
+   * Short executions , Run on-demand
+   * Scaling automatic
+   * Easy pricing
+   * Integrated with other services
+   * Many programing languages (Node.js , Pythin , Java , Ruby , custome runtime -- Rust n Golang)
