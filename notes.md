@@ -444,3 +444,5 @@
    * Use case : Security & privacy , Search engine optimzation , A/B testing etc
    * CloudFront : Cache key normalization , Header manipulation , URL rewrites or redirects , Request authentication and authorization (everythign less than 1 ms)
    * Lambda@Edge : Longer execution time (several ms) , Adjust CPU or memory , Network access to use external service , file system access or access to HTTP request body
+
+- Lambda function must be deployed in your VPC , because RFA proxy is never publicly accessible
