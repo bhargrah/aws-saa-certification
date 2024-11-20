@@ -413,3 +413,7 @@
    * EKS support EC2 (deploy workes nodes) or Fargate (serverless containers)
    * Kubernetes is cloud agnostic
    * Data volumes , sepecify storage class , leverages Container Storage Interface (CSI) comliant driver
+- AWS App Runner
+   * Fully managed service that makes it easy to deploy web application
+   * No infra experice required , start with source code or container image
+   * Use case , web apps , APIs , microservices etc 
