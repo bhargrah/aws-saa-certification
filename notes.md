@@ -402,3 +402,14 @@
    * ECS Task Role - task specific role , define in task definition
    * Data volumes (use EFS) - compatible both EC2 or Fargate mode
    * S3 cannot be mounted for ECS tasks
+- ECS (Elastic Container Registry)
+   * Storage and manage docker images on AWS
+   * Private and Public repository
+   * Fully integrated with ECS , backed by Amazon S3
+   * Access is controlled through IAM
+- EKS (Elastic Kubernetes Service)
+   * Way to launch managed kubernetes cluster on AWS
+   * Alternatives to ECS
+   * EKS support EC2 (deploy workes nodes) or Fargate (serverless containers)
+   * Kubernetes is cloud agnostic
+   * Data volumes , sepecify storage class , leverages Container Storage Interface (CSI) comliant driver
